@@ -1,0 +1,39 @@
+.rotateDiv {
+    background: radial-gradient(
+        circle at var(--a) var(--b),
+        #50678b95 0%, 
+        #1E293B 100%);
+    transform:  rotateX(var(--x)) 
+                rotateY(var(--y))
+                translateX(var(--d))
+                translateY(var(--c))
+                scale(1.04);
+    animation: cardEffect 800ms reverse infinite ease-in-out;
+    &:hover {
+        animation: none;
+    }
+}
+
+
+@keyframes cardEffect {
+    0% {
+        
+    transform:  rotateX(7deg) 
+                rotateY(7deg)
+                translateX(2px);
+    }
+    50% {
+   
+        transform:  rotateX(7deg) 
+                    rotateY(-7deg)
+                    translateX(-2px)
+        }
+    100%{
+        
+    transform:  rotateX(7deg) 
+                rotateY(7deg)
+                translateX(2px)
+    }
+
+}
+

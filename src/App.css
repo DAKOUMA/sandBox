@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  animation: inherit;
+}
+
+.pageContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arrowBack {
+  transition: 300ms ease-in-out;
+}
+.arrowBack:hover {
+  transform: scale(1.1);
+  stroke: rgb(63, 63, 109);
+}
+
+.rotateDiv {
+  background: radial-gradient(circle at var(--a) var(--b), rgba(80, 103, 139, 0.5843137255) 0%, #1E293B 100%);
+  transform: rotateX(var(--x)) rotateY(var(--y)) translateX(var(--d)) translateY(var(--c)) scale(1.04);
+  animation: cardEffect 800ms reverse infinite ease-in-out;
+}
+.rotateDiv:hover {
+  animation: none;
+}
+
+@keyframes cardEffect {
+  0% {
+    transform: rotateX(7deg) rotateY(7deg) translateX(2px);
+  }
+  50% {
+    transform: rotateX(7deg) rotateY(-7deg) translateX(-2px);
+  }
+  100% {
+    transform: rotateX(7deg) rotateY(7deg) translateX(2px);
+  }
+}
+.neumorphismContainer-card {
+  background-color: rgba(79, 61, 121, 0.8941176471);
+}
+.neumorphismContainer-card_1 {
+  background: linear-gradient(135deg, rgba(109, 91, 151, 0.8941176471) 0%, rgba(68, 57, 96, 0.8941176471) 100%);
+  box-shadow: 2px 2px 10px 0px rgba(120, 100, 167, 0.831372549), -3px -3px 12px 0px rgba(68, 57, 96, 0.8941176471);
+}
+.neumorphismContainer-card_1:hover {
+  animation: rotate-br 2000ms ease-in-out;
+}
+.neumorphismContainer-card_2 {
+  background: linear-gradient(-45deg, rgba(109, 91, 151, 0.8941176471) 0%, rgba(68, 57, 96, 0.8941176471) 100%);
+  box-shadow: 2px 2px 10px 0px rgba(120, 100, 167, 0.831372549), -3px -3px 12px 0px rgba(68, 57, 96, 0.8941176471);
+}
+.neumorphismContainer-card_2:hover {
+  animation: scale-up-center 2000ms ease-in-out;
+}
+.neumorphismContainer-card_3 {
+  box-shadow: inset 1px 1px 5px 0px rgba(120, 100, 167, 0.831372549), inset -2px -2px 6px 0px rgba(68, 57, 96, 0.8941176471);
+}
+.neumorphismContainer-card_4 {
+  box-shadow: inset 1px 1px 5px 0px rgba(120, 100, 167, 0.831372549), inset -2px -2px 6px 0px rgba(68, 57, 96, 0.8941176471);
+}
+
+.mouseIn {
+  animation: 1s shadow-in ease-in-out forwards;
+}
+
+.mouseOut {
+  animation: 0.5s shadow-out ease-in-out forwards;
+}
+
+.neumorphismContainer-card_4_mini {
+  margin-left: 50%;
+  translate: -50%;
+  box-shadow: inset 1px 1px 5px 0px rgba(120, 100, 167, 0.831372549), inset -2px -2px 6px 0px rgba(68, 57, 96, 0.8941176471);
+}
+
+.mouseIn-mini:nth-child(1) {
+  animation: 1s shadow-in ease-in-out forwards;
+}
+.mouseIn-mini:nth-child(2) {
+  animation: 1s shadow-in ease-in-out forwards;
+}
+.mouseIn-mini:nth-child(3) {
+  animation: 1s shadow-in ease-in-out forwards;
+}
+.mouseIn-mini:nth-child(4) {
+  animation: 1s shadow-in ease-in-out forwards;
+}
+
+.mouseOut-mini:nth-child(1) {
+  animation: 1s shadow-out ease-in-out forwards;
+}
+.mouseOut-mini:nth-child(2) {
+  animation: 1s shadow-out ease-in-out forwards;
+}
+.mouseOut-mini:nth-child(3) {
+  animation: 1s shadow-out ease-in-out forwards;
+}
+.mouseOut-mini:nth-child(4) {
+  animation: 1s shadow-out ease-in-out forwards;
+}
+@keyframes rotate-br {
+  0% {
+    transform: rotate(0);
+    transform-origin: center;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes shadow-in {
+  0% {
+    box-shadow: inset 1px 1px 5px 0px rgba(120, 100, 167, 0.831372549), inset -2px -2px 6px 0px rgba(68, 57, 96, 0.8941176471);
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 2px 2px 10px 0px rgba(120, 100, 167, 0.831372549), -3px -3px 12px 0px rgba(68, 57, 96, 0.8941176471);
+  }
+}
+@keyframes shadow-out {
+  0% {
+    box-shadow: 2px 2px 10px 0px rgba(120, 100, 167, 0.831372549), -3px -3px 12px 0px rgba(68, 57, 96, 0.8941176471);
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: inset 1px 1px 5px 0px rgba(120, 100, 167, 0.831372549), inset -2px -2px 6px 0px rgba(68, 57, 96, 0.8941176471);
+  }
+}
+@keyframes shadow-out-mini {
+  0% {
+    box-shadow: 2px 2px 10px 0px rgba(120, 100, 167, 0.831372549), -3px -3px 12px 0px rgba(68, 57, 96, 0.8941176471);
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: inset 1px 1px 5px 0px rgba(120, 100, 167, 0.831372549), inset -2px -2px 6px 0px rgba(68, 57, 96, 0.8941176471);
+  }
+}
+.neumorphismContainer-button_1 {
+  transition: scale 1000ms ease-in-out, color 400ms ease-in-out, transform ease-in-out;
+  background-color: #cdbcde;
+  transform-origin: center;
+  transform: translate(var(--mouseX), var(--mouseY));
+  box-shadow: -2px -2px 6px -3px rgba(86, 77, 109, 0.8941176471);
+}
+.neumorphismContainer-button_1:hover {
+  scale: 1.3;
+}
+.neumorphismContainer-button_1:hover > span {
+  opacity: 1;
+}
+.neumorphismContainer-button_1 > span {
+  transition: 2s;
+  opacity: 0;
+}
+.neumorphismContainer-button_1:active {
+  transition: scale 100ms;
+  scale: 1.2;
+  background-color: #9d8dad;
+}
+
+.gravityZone {
+  width: 300px;
+  height: 300px;
+  transition: 1s;
+}
+.gravityZone:hover {
+  box-shadow: rgb(148, 148, 148) -2px -2px 10px -1px;
+  scale: 1.01;
+}/*# sourceMappingURL=App.css.map */
